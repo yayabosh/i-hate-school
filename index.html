@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Abosh Upadhyaya">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>i hate school</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <!-- <a id="blm" href="https://eji.org/" target="_blank">
+    Black Lives Matter. If this upsets you, you are probably racist and I hope you fail your final. Click here to learn more!
+  </a> -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="landing.html">home</a></li>
+        <li><a href="index.html"><b>calculator</b></a></li>
+        <li><a href="docs.html">docs</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <h1 id="index-title"></h1>
+    <div id="finals" class="scenario-container">
+      <h2 class="scenario">An assignment or test is worth a percentage of my <em>overall</em> grade <span class="scenario-example">— like a final or project</span></h2>
+
+      <h3>One final, project, or assignment going into its own new category</h3>
+      <section class="flex-container">
+        <div id="pre-final" class="function-container">
+          <form class="function-inputs" autocomplete="off">
+            <p class="function-description">
+              What grade do I need to earn on my final to achieve a certain grade in my class?
+            </p>
+            <p>
+              <label for="current-grade-pre-final">My current grade is</label>
+              <input id="current-grade-pre-final" placeholder="84.12">
+              <label for="current-grade-pre-final">%.</label>
+            </p>
+            <p>
+              <label for="assignment-worth-pre-final">My assignment or exam is worth</label>
+              <input id="assignment-worth-pre-final" placeholder="15">
+              <label for="assignment-worth-pre-final">% of my overall grade.</label>
+            </p>
+            <p>
+              <label for="grade-wanted-pre-final">I want a</label>
+              <input id="grade-wanted-pre-final" placeholder="90">
+              <label for="grade-wanted-pre-final">% in my class.</label>
+            </p>
+            <p>
+              <button id="calculate-grade-needed-pre-final" class="button">Tell me the truth.</button>
+            </p>
+            <!-- add Could handle vs could not handle poll -->
+            <p id="grade-needed-pre-final" class="answer"></p>
+          </form>
+        </div>
+
+        <div id="post-final" class="function-container">
+          <form class="function-inputs" autocomplete="off">
+            <p class="function-description">
+              I know what I earned on my final. What's my overall grade?
+            </p>
+            <p>
+              <label for="current-grade-post-final">My current grade is</label>
+              <input id="current-grade-post-final" placeholder="77.20">
+              <label for="current-grade-post-final">%.</label>
+            </p>
+            <p>
+              <label for="assignment-worth-post-final">My assignment or exam is worth</label>
+              <input id="assignment-worth-post-final" placeholder="30">
+              <label for="assignment-worth-post-final">% of my overall grade.</label>
+            </p>
+            <p>
+              <label for="grade-earned-post-final">I earned a</label>
+              <input id="grade-earned-post-final" placeholder="92.1">
+              <label for="grade-earned-post-final">% on my assignment or test.</label>
+            </p>
+            <button id="calculate-overall-grade-post-final">Calculate my overall grade!</button>
+            <p id="overall-grade-post-final" class="answer"></p>
+          </form>
+        </div>
+      </section>
+
+      <h3>Multiple assignments or parts of a final going into a new category</h3>
+      <div id="multiple-assignments-new-category-inputs" class="function-container">
+        <form class="function-inputs" autocomplete="off">
+          <p>
+            <label for="current-grade-multiple-assignments-new-category">My current grade is</label>
+            <input id="current-grade-multiple-assignments-new-category" placeholder="62.79">
+            <label for="current-grade-multiple-assignments-new-category">%.</label>
+          </p>
+          <p>
+            <label for="category-weight-multiple-assignments-new-category">The category my assignments are going into is worth</label>
+            <input id="category-weight-multiple-assignments-new-category" placeholder="20">
+            <label for="category-weight-multiple-assignments-new-category">% of my overall grade.</label>
+          </p>
+          <p>
+            <button id="complete-new-category-inputs">Let me add my assignments!</button>
+            <button id="multiple-assignments-new-category-edit-button" class="edit-button" disabled>Edit 😐</button>
+          </p>
+          <p id="validate-new-category-inputs" class="validate"></p>
+        </form>
+      </div>
+
+      <section id="multiple-assignments-new-category-table-container" class="table-container">
+        <table id="multiple-assignments-new-category-table">
+          <tr>
+            <th>Assignment</th>
+            <th>Name</th>
+            <th>Points Earned</th>
+            <th>Total Points</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>
+              <input id="assignment-1-name-new-category" disabled>
+            </td>
+            <td>
+              <input id="assignment-1-earned-points-new-category" disabled>
+              <label for="assignment-1-earned-points-new-category">points</label>
+            </td>
+            <td>
+              <input id="assignment-1-total-points-new-category" disabled>
+              <label for="assignment-1-total-points-new-category">points</label>
+            </td>
+          </tr>
+        </table>
+        <p>
+          <button id="add-assignment-new-category" disabled>Add assignment 😳</button>
+          <button id="delete-row-new-category" disabled>Delete row 😈</button>
+          <button id="new-category-table-edit-button" class="edit-button" disabled>Edit 😐</button>
+        </p>
+        <p>
+          <button id="complete-assignment-addition-new-category" disabled>I'm done, LET'S GOOOO! 😎</button>
+          <button id="new-category-table-reset-button" class="reset-button" disabled>Reset table 💀</button>
+        </p>
+        <p id="validate-assignments-table-new-category" class="validate"></p>
+      </section>
+
+      <section class="flex-container">
+        <div id="multiple-assignments-new-category-post" class="function-container">
+          <p class="function-description">
+            I have multiple finals, projects, or assignments going into a new category. What will
+            my overall grade be?
+          </p>
+          <p>
+            <button id="calculate-grade-multiple-assignments-new-category-post" disabled>
+              Calculate my overall grade!
+            </button>
+          </p>
+          <p id="overall-grade-multiple-assignments-new-category-post" class="answer"></p>
+        </div>
+
+        <div id="multiple-assignments-new-category-pre" class="function-container">
+          <form class="function-inputs" autocomplete="off">
+            <p class="function-description">
+              I have multiple assignments going into a new category worth a percentage of my overall grade.
+              What do I need to get on one of them if I know what I will get on the others?
+            </p>
+            <p>
+              <label for="assignment-total-points-multiple-assignments-new-category-pre">My assignment is worth</label>
+              <input id="assignment-total-points-multiple-assignments-new-category-pre" placeholder="35" disabled>
+              <label for="assignment-total-points-multiple-assignments-new-category-pre">points.</label>
+            </p>
+            <p>
+              <label for="grade-wanted-multiple-assignments-new-category-pre">I want a</label>
+              <input id="grade-wanted-multiple-assignments-new-category-pre" placeholder="80" disabled>
+              <label for="grade-wanted-multiple-assignments-new-category-pre">% in my class.</label>
+            </p>
+            <p>
+              <button id="calculate-grade-multiple-assignments-new-category-pre" disabled>
+                Calculate what I need!
+              </button>
+            </p>
+            <p id="grade-needed-multiple-assignments-new-category-pre" class="answer"></p>
+          </form>
+        </div>
+      </section>
+
+      <div id="final-worth-points" class="function-container">
+        <form class="function-inputs" autocomplete="off">
+          <p class="function-description">
+            My class doesn't have weighted categories, just points. How much of my grade is my final worth?
+          </p>
+          <p>
+            <label for="total-points-final-worth">Not including the final, my class consists of</label>
+            <input id="total-points-final-worth" placeholder="744.5">
+            <label for="total-points-final-worth">points. (I may have less, but we don't talk about that.)</label>
+          </p>
+          <p>
+            <label for="final-points-final-worth">My final is worth</label>
+            <input id="final-points-final-worth" placeholder="85">
+            <label for="final-points-final-worth">points.</label>
+          </p>
+          <p>
+            <button id="calculate-final-worth-points">Calculate how much my final is worth!</button>
+          </p>
+          <p id="final-worth-points-output" class="answer"></p>
+        </form>
+      </div>
+    </div>
+
+    <div id="weights-and-categories" class="scenario-container">
+      <h2 class="scenario">My grade is made up of weighted categories <span class="scenario-example">— like tests, homework, and participation</span></h2>
+      <!-- You can also use this if: your final counts as a test, etc. etc. -->
+      <section id="weighted-categories-container" class="table-container">
+        <table id="weighted-categories-table" class="enabled">
+          <tr>
+            <th>Category</th>
+            <th>Name</th>
+            <th>Weight</th>
+            <th>Points Earned</th>
+            <th>Total Points</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>
+              <input id="category-1-name">
+            </td>
+            <td>
+              <input id="category-1-weight">
+              <label for="category-1-weight">%</label>
+            </td>
+            <td>
+              <input id="category-1-earned-points">
+              <label for="category-1-earned-points">points</label>
+            </td>
+            <td>
+              <input id="category-1-total-points">
+              <label for="category-1-total-points">points</label>
+            </td>
+          </tr>
+        </table>
+        <p>
+          <button id="add-weighted-category">Add category 😳</button>
+          <button id="delete-row-weighted-category">Delete row 😈</button>
+          <button id="edit-button-weighted-category" class="edit-button">Edit 😐</button>
+        </p>
+        <p>
+          <button id="complete-category-addition">I'm done, LET'S GOOOO! 😎</button>
+          <button id="reset-button-weighted-category" class="reset-button">Reset table 💀</button>
+        </p>
+        <p id="validate-table" class="validate"></p>
+      </section>
+
+      <h3>One assignment or test</h3>
+      <section class="flex-container">
+        <div id="pre-weighted-grade" class="function-container">
+          <form class="function-inputs" autocomplete="off">
+            <p class="function-description">
+              What grade do I need on my assignment or test to get a certain grade in my class?
+            </p>
+            <p>
+              <label for="delta-category-pre">My assignment or test is going into Category</label>
+              <input id="delta-category-pre" placeholder="1" disabled>
+              <label for="delta-category-pre">.</label>
+            </p>
+            <p>
+              <label for="assignment-points-pre">My assignment or test is worth</label>
+              <input id="assignment-points-pre" placeholder="65" disabled>
+              <label for="assignment-points-pre">points.</label>
+            </p>
+            <p>
+              <label for="grade-wanted-weighted-pre">I want a</label>
+              <input id="grade-wanted-weighted-pre" placeholder="93" disabled>
+              <label for="grade-wanted-weighted-pre">% in my class.</label>
+            </p>
+            <p>
+              <button id="weighted-grade-button-pre" disabled>Calculate what I need!</button>
+            </p>
+            <p id="calculate-weighted-grade-pre" class="answer"></p>
+          </form>
+        </div>
+
+        <div id="post-weighted-grade" class="function-container">
+          <form class="function-inputs" autocomplete="off">
+            <p class="function-description">
+              I already took my assignment or test and I know my score. What will my overall grade be?
+            </p>
+            <p>
+              <label for="delta-category-post">My assignment or test is going into Category</label>
+              <input id="delta-category-post" placeholder="1" disabled>
+              <label for="delta-category-post">.</label>
+            </p>
+            <p>
+              <label for="assignment-points-post">My assignment or test is worth</label>
+              <input id="assignment-points-post" placeholder="40" disabled>
+              <label for="assignment-points-post">points.</label>
+            </p>
+            <p>
+              <label for="grade-earned-post">I earned a</label>
+              <input id="grade-earned-post" placeholder="92" disabled>
+              <label for="grade-earned-post">% on my assignment or test.</label>
+            </p>
+            <p>
+              <button id="weighted-grade-button-post" disabled>Calculate my grade!</button>
+            </p>
+            <p id="calculate-weighted-grade-post" class="answer"></p>
+          </form>
+        </div>
+      </section>
+
+      <h3>Multiple assignments or tests</h3>
+      <section id="multiple-assignments-container" class="table-container">
+        <p>List the assignments except for the one that you don't want to bomb.</p>
+        <table id="multiple-assignments-table">
+          <tr>
+            <th>assignment</th>
+            <th>name</th>
+            <th>category</th>
+            <th>points earned</th>
+            <th>total points</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>
+              <input id="assignment-1-name" disabled>
+            </td>
+            <td>
+              <input id="assignment-1-category" disabled>
+            </td>
+            <td>
+              <input id="assignment-1-earned-points" disabled>
+              <label for="assignment-1-earned-points">points</label>
+            </td>
+            <td>
+              <input id="assignment-1-total-points" disabled>
+              <label for="assignment-1-total-points">points</label>
+            </td>
+          </tr>
+        </table>
+        <p>
+          <button id="add-assignment" disabled>Add assignment 😳</button>
+          <button id="delete-assignment-row" disabled>Delete row 😈</button>
+          <button id="edit-button-assignment-table" class="edit-button" disabled>Edit 😐</button>
+        </p>
+        <p>
+          <button id="complete-assignment-addition" disabled>I'm done, LET'S GOOOO! 😎</button>
+          <button id="reset-button-assignment-table" class="reset-button" disabled>Reset table 💀</button>
+        </p>
+        <p id="validate-assignments-table" class="validate"></p>
+      </section>
+
+      <section class="flex-container">
+        <div id="post-multiple-assignments" class="function-container">
+          <p class="function-description">
+            I have multiple assignments going into my grade and I know what I earned on each one.
+            What will my overall grade be?
+          </p>
+          <button id="multiple-assignments-weighted-grade-button-post" disabled>Calculate my overall grade!</button>
+          <p id="calculate-multiple-assignments-grade-post" class="answer"></p>
+        </div>
+
+        <div id="pre-multiple-assignments" class="function-container">
+          <form class="function-inputs" autocomplete="off">
+            <p class="function-description">
+              I have multiple assignments going into my grade. What do I need to get on one of them
+              if I choose to get a certain grade on the others?
+            </p>
+            <p>
+              <label for="assignment-category-multiple-assignments-pre">My assignment or test is going into Category</label>
+              <input id="assignment-category-multiple-assignments-pre" placeholder="1" disabled>
+              <label for="assignment-category-multiple-assignments-pre">.</label>
+            </p>
+            <p>
+              <label for="assignment-total-points-multiple-assignments-pre">My assignment or test is worth</label>
+              <input id="assignment-total-points-multiple-assignments-pre" placeholder="40" disabled>
+              <label for="assignment-total-points-multiple-assignments-pre">points.</label>
+            </p>
+            <p>
+              <label for="grade-wanted-multiple-assignments-pre">I want a</label>
+              <input id="grade-wanted-multiple-assignments-pre" placeholder="90" disabled>
+              <label for="grade-wanted-multiple-assignments-pre">% in my class.</label>
+            </p>
+            <button id="multiple-assignments-weighted-grade-button-pre" disabled>Calculate what I need!</button>
+            <p id="calculate-multiple-assignments-grade-pre" class="answer"></p>
+          </form>
+        </div>
+      </section>
+
+
+      <div id="final-worth-weighted" class="function-container">
+        <form class="function-inputs" autocomplete="off">
+          <p class="function-description">
+            My final is going into a weighted category. How much of my overall grade is my final worth?
+          </p>
+          <p>
+            <label for="category-weight-final-worth-weighted">The category my final's going into is worth</label>
+            <input id="category-weight-final-worth-weighted" placeholder="700">
+            <label for="category-weight-final-worth-weighted">% of my overall grade.</label>
+          </p>
+          <p>
+            <label for="final-points-final-worth-weighted">My final is worth</label>
+            <input id="final-points-final-worth-weighted" placeholder="85">
+            <label for="final-points-final-worth-weighted">points.</label>
+          </p>
+          <p>
+            <label for="weighted-category-points-final-worth-weighted">Not including the final, there are</label>
+            <input id="weighted-category-points-final-worth-weighted" placeholder="245.5">
+            <label for="weighted-category-points-final-worth-weighted">points available the weighted category.</label>
+          </p>
+          <button id="calculate-final-worth-weighted">Calculate how much my final is worth!</button>
+          <p id="output-final-worth-weighted" class="answer"></p>
+        </form>
+      </div>
+    </div>
+
+    <div id="extra-credit" class="scenario-container">
+      <h2 class="scenario">Extra credit <span class="scenario-example">— like an assignment or grade change</span></h2>
+
+      <!-- <p class="scenario-description">
+        If your extra credit is going in as an assignment, like 5 out of 5 points, use one of the other calculators.
+        This is for credit that is awarded to a category or grade <em>with no change to the overall point total.</em>
+      </p> -->
+
+      <div id="ec-points-only" class="sub-scenario-container">
+        <h3 class="sub-scenario-description">
+          My class doesn't have any weighted categories, just points.
+        </h3>
+        <!-- fixed height and width for flex boxes -->
+        <section class="flex-container">
+          <div id="pre-ec-points-only" class="function-container">
+            <form class="function-inputs" autocomplete="off">
+              <p class="function-description">
+                How much extra credit do I need to achieve a certain grade?
+              </p>
+              <p>
+                <label for="class-points-pre-ec-points-only">My class consists of</label>
+                <input id="class-points-pre-ec-points-only" placeholder="823.5">
+                <label for="class-points-pre-ec-points-only">points in total.</label>
+              </p>
+              <p>
+                <label for="earned-points-pre-ec-points-only">I've earned</label>
+                <input id="earned-points-pre-ec-points-only" placeholder="782">
+                <label for="earned-points-pre-ec-points-only">points in my class.</label>
+              </p>
+              <p>
+                <label for="grade-wanted-pre-ec-points-only">I want a</label>
+                <input id="grade-wanted-pre-ec-points-only" placeholder="97">
+                <label for="grade-wanted-pre-ec-points-only">% in the class.</label>
+              </p>
+              <button id="calculate-pre-ec-points-only">Calculate how much credit I need!</button>
+              <p id="ec-needed-pre-ec-points-only" class="answer"></p>
+            </form>
+          </div>
+
+          <div id="post-ec-points-only" class="function-container">
+            <form class="function-inputs" autocomplete="off">
+              <p class="function-description">
+                I already know how many points the extra credit is worth. How will it affect my
+                overall grade?
+              </p>
+              <p>
+                <label for="class-points-post-ec-points-only">My class consists of</label>
+                <input id="class-points-post-ec-points-only" placeholder="145">
+                <label for="class-points-post-ec-points-only">points in total.</label>
+              </p>
+              <p>
+                <label for="earned-points-post-ec-points-only">I have earned</label>
+                <input id="earned-points-post-ec-points-only" placeholder="128">
+                <label for="earned-points-post-ec-points-only">points in my class.</label>
+              </p>
+              <p>
+                <label for="ec-points-post-ec-points-only">The extra credit is worth</label>
+                <input id="ec-points-post-ec-points-only" placeholder="10">
+                <label for="ec-points-post-ec-points-only">points.</label>
+              </p>
+              <button id="calculate-post-ec-points-only">Calculate my overall grade!</button>
+              <p id="overall-grade-post-ec-points-only" class="answer"></p>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      <div id="ec-weights" class="sub-scenario-container">
+        <h3 class="sub-scenario-description">
+          My grade is made up of weighted categories. And it sucks.
+        </h3>
+        <!-- make transition smoother and edit -->
+        <p class="function-description">
+          <a href="#weights-and-categories">
+            How much extra credit do I need in a category to achieve a certain grade?
+          </a>
+        </p>
+      </div>
+    </div>
+    <!-- literally have no idea why this works but do not remove - it prevents transitions on page load -->
+    <script defer> </script>
+    <script defer src="script.js"></script>
+    <noscript>
+      <a href="https://www.enable-javascript.com/" target="_blank">Enable JavaScript</a>
+      to view the full site.
+    </noscript>
+  </body>
+</html>
