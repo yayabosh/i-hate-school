@@ -1,1 +1,1 @@
-# i-hate-school
+# one-hundred-percent
