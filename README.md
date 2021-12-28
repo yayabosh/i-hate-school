@@ -2,4 +2,4 @@
 
 Formerly I Hate School.
 
-Open index.html in a browser of your choice!
+Use [here](https://yayabosh.github.io/one-hundred-percent/).
