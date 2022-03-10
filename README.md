@@ -1,5 +1,3 @@
-# one-hundred-percent
-
-Formerly I Hate School.
+# i-hate-school
 
 Use [here](https://yayabosh.github.io/one-hundred-percent/).
