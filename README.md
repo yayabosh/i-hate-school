@@ -1,3 +1,3 @@
 # i-hate-school
 
-Use [here](https://yayabosh.github.io/one-hundred-percent/).
+Use [here](https://yayabosh.github.io/i-hate-school/).
