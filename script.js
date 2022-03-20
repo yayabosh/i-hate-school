@@ -20,16 +20,21 @@ const titles = ['𝖎 𝖍𝖆𝖙𝖊 𝖘𝖈𝖍𝖔𝖔𝖑', 'i hate school
 const titlesCSS = ['-moz-transform: scale(-1, 1); -webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); -ms-transform: scale(-1, 1);  transform: scale(-1, 1);',
 '-moz-transform: scale(1, -1); -webkit-transform: scale(1, -1); -o-transform: scale(1, -1); -ms-transform: scale(1, -1); transform: scale(1, -1);', 'text-decoration: line-through;']
 
-window.onload = () => {
-  const title       = document.getElementById('index-title')
+const title = document.getElementById('index-title')
+const changeTitleFont = () => {
   const randomIndex = Math.floor(Math.random() * titles.length)
+  // Upside-down text, backwards text, strikethrough
   if (randomIndex === 5 || randomIndex === 6 || randomIndex === 7) {
     title.style.cssText = titlesCSS[Math.floor(Math.random() * 3)]
     title.textContent   = 'i hate school'
   } else {
+    title.style.cssText = ''
     title.innerHTML = titles[randomIndex]
   }
 }
+
+window.onload = () => changeTitleFont()
+title.addEventListener('click', changeTitleFont);
 
 const clearDocument = () => {
   const paragraphs = document.querySelectorAll('p.answer, p.validate')
