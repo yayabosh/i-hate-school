@@ -33,7 +33,10 @@ const changeTitleFont = () => {
   }
 }
 
+// Load random title font on page load
 window.onload = () => changeTitleFont()
+
+// Change title font on click
 title.addEventListener('click', changeTitleFont);
 
 const clearDocument = () => {
